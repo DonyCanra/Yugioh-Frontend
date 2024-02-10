@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "https://yugioh.tipsngoding.com";
 
 export const useCustomerStore = defineStore("customer", {
   state: () => ({
@@ -161,6 +161,7 @@ export const useCustomerStore = defineStore("customer", {
 
     async postTransaction(id) {
       try {
+        // console.log(localStorage.access_token, "<<");
         await axios({
           method: "post",
           url: `${BASE_URL}/orders/${id}`,

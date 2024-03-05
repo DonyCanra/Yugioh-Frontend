@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-const BASE_URL = "https://yugioh.tipsngoding.com";
+// const BASE_URL = "https://yugioh.tipsngoding.com";
+const BASE_URL = "http://localhost:3001/";
 
 export const useCustomerStore = defineStore("customer", {
   state: () => ({
